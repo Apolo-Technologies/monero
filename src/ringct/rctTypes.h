@@ -1,4 +1,4 @@
-// Copyright (c) 2016, Monero Research Labs
+// Copyright (c) 2016, Zerium Research Labs
 //
 // Author: Shen Noether <shen.noether@gmx.com>
 //
@@ -62,7 +62,7 @@ extern "C" {
 #define DP(x)
 #endif
 
-//atomic units of moneros
+//atomic units of zeriums
 #define ATOMS 64
 
 //for printing large ints
@@ -118,7 +118,7 @@ namespace rct {
         BEGIN_SERIALIZE_OBJECT()
           FIELD(mask)
           FIELD(amount)
-          // FIELD(senderPk) // not serialized, as we do not use it in monero currently
+          // FIELD(senderPk) // not serialized, as we do not use it in zerium currently
         END_SERIALIZE()
     };
 

@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2017, The Monero Project
+// Copyright (c) 2014-2017, The Zerium Project
 // 
 // All rights reserved.
 // 
@@ -191,12 +191,12 @@ t_command_server::t_command_server(
     m_command_lookup.set_handler(
       "start_save_graph"
     , std::bind(&t_command_parser_executor::start_save_graph, &m_parser, p::_1)
-    , "Start save data for dr monero"
+    , "Start save data for dr zerium"
     );
     m_command_lookup.set_handler(
       "stop_save_graph"
     , std::bind(&t_command_parser_executor::stop_save_graph, &m_parser, p::_1)
-    , "Stop save data for dr monero"
+    , "Stop save data for dr zerium"
     );
     m_command_lookup.set_handler(
       "hard_fork_info"
@@ -300,7 +300,7 @@ bool t_command_server::help(const std::vector<std::string>& args)
 std::string t_command_server::get_commands_str()
 {
   std::stringstream ss;
-  ss << "Monero '" << ZERIUM_RELEASE_NAME << "' (v" << ZERIUM_VERSION_FULL << ")" << std::endl;
+  ss << "Zerium '" << ZERIUM_RELEASE_NAME << "' (v" << ZERIUM_VERSION_FULL << ")" << std::endl;
   ss << "Commands: " << std::endl;
   std::string usage = m_command_lookup.get_usage();
   boost::replace_all(usage, "\n", "\n  ");

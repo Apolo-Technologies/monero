@@ -1,18 +1,18 @@
 [Unit]
-Description=Monero Full Node
+Description=Zerium Full Node
 After=network.target
 
 [Service]
-User=monero
-Group=monero
+User=zerium
+Group=zerium
 WorkingDirectory=~
-RuntimeDirectory=monero
+RuntimeDirectory=zerium
 
 Type=forking
-PIDFile=/run/monero/monerod.pid
+PIDFile=/run/zerium/zeriumd.pid
 
-ExecStart=/usr/bin/monerod --config-file /etc/monerod.conf \
-    --detach --pidfile /run/monero/monerod.pid
+ExecStart=/usr/bin/zeriumd --config-file /etc/zeriumd.conf \
+    --detach --pidfile /run/zerium/zeriumd.pid
 
 [Install]
 WantedBy=multi-user.target

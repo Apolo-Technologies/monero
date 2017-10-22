@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2017, The Monero Project
+// Copyright (c) 2014-2017, The Zerium Project
 //
 // All rights reserved.
 //
@@ -50,7 +50,7 @@ using namespace cryptonote;
 #undef ZERIUM_DEFAULT_LOG_CATEGORY
 #define ZERIUM_DEFAULT_LOG_CATEGORY "WalletAPI"
 
-namespace Monero {
+namespace Zerium {
 
 namespace {
     // copy-pasted from simplewallet
@@ -1619,4 +1619,4 @@ bool WalletImpl::useForkRules(uint8_t version, int64_t early_blocks) const
 
 } // namespace
 
-namespace Bitmonero = Monero;
+namespace Bitzerium = Zerium;

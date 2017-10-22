@@ -1,4 +1,4 @@
-# Copyright (c) 2014-2017, The Monero Project
+# Copyright (c) 2014-2017, The Zerium Project
 #
 # All rights reserved.
 #
@@ -68,9 +68,9 @@ set(wallet_private_headers
   api/subaddress_account.h
   api/unsigned_transaction.h)
 
-monero_private_headers(wallet
+zerium_private_headers(wallet
   ${wallet_private_headers})
-monero_add_library(wallet
+zerium_add_library(wallet
   ${wallet_sources}
   ${wallet_api_headers}
   ${wallet_private_headers})
@@ -98,9 +98,9 @@ if (NOT BUILD_GUI_DEPS)
   set(wallet_rpc_private_headers
     wallet_rpc_server.h)
 
-  monero_private_headers(wallet_rpc_server
+  zerium_private_headers(wallet_rpc_server
     ${wallet_rpc_private_headers})
-  monero_add_executable(wallet_rpc_server
+  zerium_add_executable(wallet_rpc_server
     ${wallet_rpc_sources}
     ${wallet_rpc_headers}
     ${wallet_rpc_private_headers})
@@ -122,7 +122,7 @@ if (NOT BUILD_GUI_DEPS)
       ${EXTRA_LIBRARIES})
   set_property(TARGET wallet_rpc_server
     PROPERTY
-      OUTPUT_NAME "monero-wallet-rpc")
+      OUTPUT_NAME "zerium-wallet-rpc")
   install(TARGETS wallet_rpc_server DESTINATION bin)
 endif()
 

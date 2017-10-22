@@ -1,4 +1,4 @@
-// Copyright (c) 2017, The Monero Project
+// Copyright (c) 2017, The Zerium Project
 //
 // All rights reserved.
 //
@@ -104,12 +104,12 @@ int main(int argc, char* argv[])
   SL(tools::wallet2::unsigned_tx_set);
   SL(tools::wallet2::signed_tx_set);
 
-  SL(Monero::WalletImpl);
-  SL(Monero::AddressBookRow);
-  SL(Monero::TransactionInfoImpl);
-  SL(Monero::TransactionHistoryImpl);
-  SL(Monero::PendingTransactionImpl);
-  SL(Monero::UnsignedTransactionImpl);
+  SL(Zerium::WalletImpl);
+  SL(Zerium::AddressBookRow);
+  SL(Zerium::TransactionInfoImpl);
+  SL(Zerium::TransactionHistoryImpl);
+  SL(Zerium::PendingTransactionImpl);
+  SL(Zerium::UnsignedTransactionImpl);
 
   return 0;
 }

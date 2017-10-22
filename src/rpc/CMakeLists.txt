@@ -1,4 +1,4 @@
-# Copyright (c) 2014-2017, The Monero Project
+# Copyright (c) 2014-2017, The Zerium Project
 #
 # All rights reserved.
 #
@@ -62,24 +62,24 @@ set(daemon_rpc_server_private_headers
   zmq_server.h)
 
 
-monero_private_headers(rpc
+zerium_private_headers(rpc
   ${rpc_private_headers})
 
-monero_private_headers(daemon_rpc_server
+zerium_private_headers(daemon_rpc_server
   ${daemon_rpc_server_private_headers})
 
 
-monero_add_library(rpc
+zerium_add_library(rpc
   ${rpc_sources}
   ${rpc_headers}
   ${rpc_private_headers})
 
-monero_add_library(daemon_messages
+zerium_add_library(daemon_messages
   ${daemon_messages_sources}
   ${daemon_messages_headers}
   ${daemon_messages_private_headers})
 
-monero_add_library(daemon_rpc_server
+zerium_add_library(daemon_rpc_server
   ${daemon_rpc_server_sources}
   ${daemon_rpc_server_headers}
   ${daemon_rpc_server_private_headers})

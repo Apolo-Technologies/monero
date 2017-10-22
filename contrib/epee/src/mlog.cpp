@@ -134,12 +134,12 @@ void mlog_configure(const std::string &filename_base, bool console, const std::s
     rename(name, rname.c_str());
   });
   mlog_set_common_prefix();
-  const char *monero_log = getenv("ZERIUM_LOGS");
-  if (!monero_log)
+  const char *zerium_log = getenv("ZERIUM_LOGS");
+  if (!zerium_log)
   {
-    monero_log = get_default_categories(0);
+    zerium_log = get_default_categories(0);
   }
-  mlog_set_log(monero_log);
+  mlog_set_log(zerium_log);
 }
 
 void mlog_set_categories(const char *categories)

@@ -1,4 +1,4 @@
-# Copyright (c) 2014-2017, The Monero Project
+# Copyright (c) 2014-2017, The Zerium Project
 #
 # All rights reserved.
 #
@@ -39,13 +39,13 @@ if (NOT (MINGW OR APPLE OR FREEBSD OR OPENBSD OR DRAGONFLY))
   add_compile_options("${WARNINGS_AS_ERRORS_FLAG}") # applies only to targets that follow
 endif()
 
-function (monero_private_headers group)
+function (zerium_private_headers group)
   source_group("${group}\\Private"
     FILES
       ${ARGN})
 endfunction ()
 
-function (monero_install_headers subdir)
+function (zerium_install_headers subdir)
   install(
     FILES       ${ARGN}
     DESTINATION "include/${subdir}"
@@ -63,7 +63,7 @@ function (enable_stack_trace target)
   endif()
 endfunction()
 
-function (monero_add_executable name)
+function (zerium_add_executable name)
   source_group("${name}"
     FILES
       ${ARGN})
@@ -82,7 +82,7 @@ function (monero_add_executable name)
   enable_stack_trace("${name}")
 endfunction ()
 
-function (monero_add_library name)
+function (zerium_add_library name)
   source_group("${name}"
     FILES
       ${ARGN})
@@ -102,7 +102,7 @@ function (monero_add_library name)
 endfunction ()
 
 set_source_files_properties(${CMAKE_BINARY_DIR}/version.cpp PROPERTIES GENERATED ON)
-monero_add_library(version ${CMAKE_BINARY_DIR}/version.cpp)
+zerium_add_library(version ${CMAKE_BINARY_DIR}/version.cpp)
 
 add_subdirectory(common)
 add_subdirectory(crypto)
