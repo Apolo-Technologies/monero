@@ -40,8 +40,8 @@ using namespace epee;
 #include <sstream>
 #include <random>
 
-#undef MONERO_DEFAULT_LOG_CATEGORY
-#define MONERO_DEFAULT_LOG_CATEGORY "checkpoints"
+#undef ZERIUM_DEFAULT_LOG_CATEGORY
+#define ZERIUM_DEFAULT_LOG_CATEGORY "checkpoints"
 
 namespace cryptonote
 {

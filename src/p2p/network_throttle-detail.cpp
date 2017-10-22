@@ -76,8 +76,8 @@
 // TODO:
 #include "network_throttle-detail.hpp"
 
-#undef MONERO_DEFAULT_LOG_CATEGORY
-#define MONERO_DEFAULT_LOG_CATEGORY "net.throttle"
+#undef ZERIUM_DEFAULT_LOG_CATEGORY
+#define ZERIUM_DEFAULT_LOG_CATEGORY "net.throttle"
 
 // ################################################################################################
 // ################################################################################################

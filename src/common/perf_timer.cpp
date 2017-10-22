@@ -28,8 +28,8 @@
 
 #include "perf_timer.h"
 
-#undef MONERO_DEFAULT_LOG_CATEGORY
-#define MONERO_DEFAULT_LOG_CATEGORY "perf"
+#undef ZERIUM_DEFAULT_LOG_CATEGORY
+#define ZERIUM_DEFAULT_LOG_CATEGORY "perf"
 
 namespace tools
 {

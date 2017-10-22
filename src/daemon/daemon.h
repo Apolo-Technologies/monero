@@ -29,8 +29,8 @@
 #pragma once
 #include <boost/program_options.hpp>
 
-#undef MONERO_DEFAULT_LOG_CATEGORY
-#define MONERO_DEFAULT_LOG_CATEGORY "daemon"
+#undef ZERIUM_DEFAULT_LOG_CATEGORY
+#define ZERIUM_DEFAULT_LOG_CATEGORY "daemon"
 
 namespace daemonize {
 
