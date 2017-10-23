@@ -68,7 +68,7 @@ The Zerium donation address is: `44AFFq5kSiGBoZ4NMDwYtN18obc8AemS33DBLWs3H7otXft
 
 The Bitcoin donation address is: `1KTexdemPdxSBcG55heUuTjDRYqbC5ZL8H`
 
-*Note: you can easily donate XMR to the Zerium donation address by using the `donate` command. Type `help` in the command-line wallet for details.*
+*Note: you can easily donate ZMR to the Zerium donation address by using the `donate` command. Type `help` in the command-line wallet for details.*
 
 Core development funding and/or some supporting services are also graciously provided by sponsors:
 

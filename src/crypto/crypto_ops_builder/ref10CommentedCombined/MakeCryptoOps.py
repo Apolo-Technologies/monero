@@ -120,10 +120,10 @@ ge_comments = textwrap.dedent("""\
     */
     """)
 
-xmr_comments = textwrap.dedent("""\
+zmr_comments = textwrap.dedent("""\
     /*
      *
-     * xmr specific code
+     * zmr specific code
      *
      *
     This code is from the original CryptoNote.
@@ -171,7 +171,7 @@ if a == "m":
         os.system("cp "+g+" "+g.replace("fe", "fe.zerium."))
     qhasmToC("fe_pow22523.c", "pow22523.h", "fe.zerium._pow22523.c")
     qhasmToC("fe_invert.c", "pow225521.h", "fe.zerium._invert.c")
-    os.system("rm fe.zerium._isnonzero.c") #since it's modified, it's in xmrSpecificOld
+    os.system("rm fe.zerium._isnonzero.c") #since it's modified, it's in zmrSpecificOld
     os.system("cat fe.zerium.*.c | grep -v '^#include' > fe.zerium.c")
 
     #sc things
@@ -180,7 +180,7 @@ if a == "m":
     #so you don't get multiple "loads"
     os.system("tail -n +24 sc_reduce.c > sc.zerium._reduce.c") #also good on linux
     os.system("tail -n +24 sc_muladd.c > sc.zerium._muladd.c")
-    os.system("tail -n +31 sc_sub.xmr.c > sc.zerium._sub.xmr.c") #careful with the tails if you change these files!
+    os.system("tail -n +31 sc_sub.zmr.c > sc.zerium._sub.zmr.c") #careful with the tails if you change these files!
     os.system("cat sc.zerium.*.c | grep -v '^#include' > sc.zerium.c")
 
     #ge stuff
@@ -223,9 +223,9 @@ if a == "m":
             text_file.write(ge_comments)
     with open("sc.zerium.comments", "w") as text_file:
             text_file.write(sc_comments)
-    with open("xmr.zerium.comments", "w") as text_file:
-            text_file.write(xmr_comments)
-    with open("xmr.zerium.predeclarations", "w") as text_file:
+    with open("zmr.zerium.comments", "w") as text_file:
+            text_file.write(zmr_comments)
+    with open("zmr.zerium.predeclarations", "w") as text_file:
             text_file.write(predeclarations)
 
 
@@ -238,7 +238,7 @@ if a == "m":
         text_file.write(crypto_ops_includes)
 
     #note you may have duplicates of load_3, load_4 and possibly some other functions ... 
-    os.system("cat zerium.license crypto-ops.zerium.includes xmr.zerium.predeclarations fe.zerium.comments fe.zerium.c sc.zerium.comments sc.zerium.c ge.zerium.comments ge.zerium.c xmr.zerium.comments xmrSpecificOld.c > crypto-ops.c")
+    os.system("cat zerium.license crypto-ops.zerium.includes zmr.zerium.predeclarations fe.zerium.comments fe.zerium.c sc.zerium.comments sc.zerium.c ge.zerium.comments ge.zerium.c zmr.zerium.comments zmrSpecificOld.c > crypto-ops.c")
 
     #zerium specific header files
     #print("making crypto-ops-tmp.h")
