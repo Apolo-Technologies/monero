@@ -54,11 +54,11 @@
 #define EMISSION_SPEED_FACTOR_PER_MINUTE                (20)
 #define FINAL_SUBSIDY_PER_MINUTE                        ((uint64_t)300000000000) // 3 * pow(10, 11)
 
-#define CRYPTONOTE_REWARD_BLOCKS_WINDOW                 10
-#define CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V2    6000 //size of block (bytes) after which reward for block calculated using block size
-#define CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V1    2000 //size of block (bytes) after which reward for block calculated using block size - before first fork
-#define CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V5    30000 //size of block (bytes) after which reward for block calculated using block size - second change, from v5
-#define CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE          60
+#define CRYPTONOTE_REWARD_BLOCKS_WINDOW                 100
+#define CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V2    60000 //size of block (bytes) after which reward for block calculated using block size
+#define CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V1    20000 //size of block (bytes) after which reward for block calculated using block size - before first fork
+#define CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V5    300000 //size of block (bytes) after which reward for block calculated using block size - second change, from v5
+#define CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE          600
 #define CRYPTONOTE_DISPLAY_DECIMAL_POINT                12
 // COIN - number of smallest units in one coin
 #define COIN                                            ((uint64_t)1000000000000) // pow(10, 12)
@@ -158,7 +158,7 @@ namespace config
       0x42, 0x49, 0x54, 0x5a, 0x45, 0x52, 0x49, 0x55, 0x4d
     } }; // Bender's nightmare
   //std::string const GENESIS_TX = "013c01ff0001ffffffffffff03029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd08807121017767aafcde9be00dcfd098715ebcf7f410daebc582fda69d24a28e9d0bc890d1";
-  std::string const GENESIS_TX = "013c01ff0001ffffffffffff0f029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd08807121014b2dc01dd80fb4b9e9bc8f0f12180f6767b2b848a633f186d2c9a9c653221ad6";
+  std::string const GENESIS_TX = "013c01ff0001ffffffffffff0f029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd0880712101588b26a89ec23d267a95ec0667d402b5e8f82ca9c2d7b6263e15faca2f731a2f";
   uint32_t const GENESIS_NONCE = 10000;
 
   namespace testnet
@@ -173,7 +173,7 @@ namespace config
 		0x42, 0x49, 0x54, 0x5a, 0x45, 0x52, 0x49, 0x55, 0x4d, 0x54, 0x45, 0x53, 0x4e, 0x45, 0x54
       } }; // Bender's daydream
     //std::string const GENESIS_TX = "013c01ff0001ffffffffffff0f029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd0880712101168d0c4ca86fb55a4cf6a36d31431be1c53a3bd7411bb24e8832410289fa6f3b";
-	std::string const GENESIS_TX = "013c01ff0001ffffffffffff0f029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd0880712101588b26a89ec23d267a95ec0667d402b5e8f82ca9c2d7b6263e15faca2f731a2f";
+	std::string const GENESIS_TX = "013c01ff0001ffffffffffff0f029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd08807121014b2dc01dd80fb4b9e9bc8f0f12180f6767b2b848a633f186d2c9a9c653221ad6";
 	uint32_t const GENESIS_NONCE = 10001;
   }
 }
