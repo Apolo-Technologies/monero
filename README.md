@@ -1,6 +1,6 @@
 # Zerium
 
-Copyright (c) 2014-2017, The Zerium Project
+Copyright (c) 2017-2018, Apolo Technologies' The Zerium Project
 Portions Copyright (c) 2012-2013, The Cryptonote developers
 
 ## Development Resources
@@ -14,7 +14,6 @@ Portions Copyright (c) 2012-2013, The Cryptonote developers
 ## Vulnerability Response
 
 - Our [Vulnerability Response Process](https://github.com/zerium-project/meta/blob/master/VULNERABILITY_RESPONSE_PROCESS.md) encourages responsible disclosure
-- We are also available via [HackerOne](https://hackerone.com/zerium)
 
 ## Build
 
@@ -42,17 +41,17 @@ Portions Copyright (c) 2012-2013, The Cryptonote developers
 
 ## Introduction
 
-Zerium is a private, secure, untraceable, decentralised digital currency. You are your bank, you control your funds, and nobody can trace your transfers unless you allow them to do so.
+Zerium is a private, secure, untraceable, decentralised digital currency based on cryptonote algorithm focusing on a smart contract ecosystem. You are in control of your investment to the point that nobody can trace your transfers unless you allow them to do so. By having Zerium tokens you can have access to a variety of dAPPS (Decentralized applications) as well as tools to develop them in the Zerium blockchain.
 
-**Privacy:** Zerium uses a cryptographically sound system to allow you to send and receive funds without your transactions being easily revealed on the blockchain (the ledger of transactions that everyone has). This ensures that your purchases, receipts, and all transfers remain absolutely private by default.
+**Privacy:** Zerium uses a cryptographically sound system to allow you to send and receive funds without your transactions being easily revealed on the blockchain (the ledger of transactions). This ensures that your purchases, receipts, and all transfers remain absolutely private by default. The Smart contracts are to a point bound by this same principal making them more secure and versatile
 
-**Security:** Using the power of a distributed peer-to-peer consensus network, every transaction on the network is cryptographically secured. Individual wallets have a 25 word mnemonic seed that is only displayed once, and can be written down to backup the wallet. Wallet files are encrypted with a passphrase to ensure they are useless if stolen.
+**Security:** Using the structure of a distributed peer-to-peer consensus network, every transaction on the network is cryptographically secured. Individual wallets have a 25 word mnemonic seed that is only displayed once, and can be written down to backup the wallet. Wallet files are encrypted with a passphrase to ensure they are useless if stolen.
 
-**Untraceability:** By taking advantage of ring signatures, a special property of a certain type of cryptography, Zerium is able to ensure that transactions are not only untraceable, but have an optional measure of ambiguity that ensures that transactions cannot easily be tied back to an individual user or computer.
+**Untraceability:** By integrating Monero's ring signatures, a special property of a certain type of cryptography, Zerium is able to ensure that transactions are not only untraceable, but have an optional measure of ambiguity that ensures that transactions cannot easily be tied back to an individual user or computer.
 
 ## About this Project
 
-This is the core implementation of Zerium. It is open source and completely free to use without restrictions, except for those specified in the license agreement below. There are no restrictions on anyone creating an alternative implementation of Zerium that uses the protocol and network in a compatible manner.
+Zerium is open source and completely free to use without restrictions, except for those specified in the license agreement below. There are no restrictions on anyone creating an alternative implementation of Zerium that uses the protocol and network in a compatible manner.
 
 As with many development projects, the repository on Github is considered to be the "staging" area for the latest changes. Before changes are merged into that branch on the main repository, they are tested by individual developers in their own branches, submitted as a pull request, and then subsequently tested by contributors who focus on testing and code reviews. That having been said, the repository should be carefully considered before using it in a production environment, unless there is a patch in the repository for a particular show-stopping issue you are experiencing. It is generally a better idea to use a tagged release for stability.
 
@@ -61,14 +60,11 @@ As with many development projects, the repository on Github is considered to be 
 ## Supporting the Project
 
 Zerium development can be supported directly through donations.
+We accept multiple crypto currency donations
 
-Both Zerium and Bitcoin donations can be made to donate.getzerium.org if using a client that supports the [OpenAlias](https://openalias.org) standard
-
-The Zerium donation address is: `44AFFq5kSiGBoZ4NMDwYtN18obc8AemS33DBLWs3H7otXft3XjrpDtQGv7SqSsaBYBb98uNbr2VBBEt7f2wfn3RVGQBEP3A` (viewkey: `f359631075708155cc3d92a32b75a7d02a5dcf27756707b47a2b31b21c389501`)
+The Monero donation address is: `44AFFq5kSiGBoZ4NMDwYtN18obc8AemS33DBLWs3H7otXft3XjrpDtQGv7SqSsaBYBb98uNbr2VBBEt7f2wfn3RVGQBEP3A` (viewkey: `f359631075708155cc3d92a32b75a7d02a5dcf27756707b47a2b31b21c389501`)
 
 The Bitcoin donation address is: `1KTexdemPdxSBcG55heUuTjDRYqbC5ZL8H`
-
-*Note: you can easily donate XMR to the Zerium donation address by using the `donate` command. Type `help` in the command-line wallet for details.*
 
 Core development funding and/or some supporting services are also graciously provided by sponsors:
 
@@ -96,20 +92,20 @@ See [Vulnerability Response Process](VULNERABILITY_RESPONSE_PROCESS.md).
 
 ## Zerium software updates and Network Consensus Protocol Upgrade (hard fork schedule)
 
-Zerium uses a fixed-schedule network consensus protocol upgrade (hard fork) mechanism to implement new features. This means that users of Zerium (end users and service providers) need to run current versions and upgrade their software on a regular schedule. Network consensus protocol upgrades occur during the months of March and September. Required software for these consensus protocol upgrades is available prior to the date of the consensus protocol upgrade. Please check the git repository prior to this date for the proper Zerium software version. Below is the historical schedule and the projected schedule for the next upgrade.
+Zerium uses a fixed-schedule network consensus protocol upgrade (hard fork) mechanism to implement new features. This means that users  (end users and service providers) need to run current versions and upgrade their software on a regular schedule. Network consensus protocol upgrades occur during the months of March and September. Required software for these consensus protocol upgrades is available prior to the date of the consensus protocol upgrade. Please check the git repository prior to this date for the proper Zerium software version. Below is the historical schedule and the projected schedule for the next upgrade.
 Dates are provided in the format YYYY-MM-DD. 
 
 
 | Consensus Upgrade Block Height | Date       | Consensus version | Minimum Zerium Version | Recommended Zerium Version | Details                                                                            |  
 | ------------------------------ | -----------| ----------------- | ---------------------- | -------------------------- | ---------------------------------------------------------------------------------- |
-| 1009827                        | 2016-03-22 | v2                | v0.9.4                 | v0.9.4                     | Allow only >= ringsize 3, blocktime = 120 seconds, fee-free blocksize 60 kb       |
-| 1141317                        | 2016-09-21 | v3                | v0.9.4                 | v0.10.0                    | Splits coinbase into denominations  |
-| 1220516                        | 2017-01-05 | v4                | v0.10.1                | v0.10.2.1                  | Allow normal and RingCT transactions |
-| 1288616                        | 2017-04-15 | v5                | v0.10.3.0              | v0.10.3.1                  | Adjusted minimum blocksize and fee algorithm      |
-| 1400000                        | 2017-09-16 | v6                | v0.11.0.0              | v0.11.0.0                  | Allow only RingCT transactions, allow only >= ringsize 5      |
-| XXXXXXX                        | 2018-03-XX | XX                | XXXXXXXXX              | XXXXXXXXX                  | XXXXXX
+| 9827                        | 2017-12-22 | v1                | v0.5.1                 | v0.6.0                     | Allow only >= ringsize 5, blocktime = 110 seconds, fee-free blocksize 60 kb       |
+| 141317                        | 2018-2-21 | v2                | v1.0.0                 | v1.0.5                    | Splits coinbase into denominations  |
+| 220516                        | 2018-01-05 | v3                | v2.10.1                | v3.0.0                  | Allow normal and RingCT transactions |
+| 288616                        | 2018-04-15 | v4                | v3.10.3             | v4.0.0                  | Adjusted minimum blocksize and fee algorithm      |
+| 400000                        | 2018-09-16 | v5                | v4.11.0             | v5.0.0                  | Allow only RingCT transactions, allow only >= ringsize 5      |
+| 1000000                        | 2018-11-30 | XX                | XXXXXXXXX              | XXXXXXXXX                  | XXXXXX
 
-X's indicate that these details have not been determined as of commit date, 2017-09-20. 
+PoS Integration, complete launch of Decentralized applications' ecosystem 
 
 ## Installing Zerium from a Package
 
