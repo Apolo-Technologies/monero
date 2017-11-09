@@ -1,6 +1,6 @@
 # Zerium
 
-Copyright (c) 2017-2018, Apolo Technologies' The Zerium Project
+Copyright (c) 2017-2018, Apolo Blockchain Technologies' The Zerium Project
 Portions Copyright (c) 2012-2013, The Cryptonote developers
 
 ## Development Resources
@@ -62,9 +62,9 @@ As with many development projects, the repository on Github is considered to be 
 Zerium development can be supported directly through donations.
 We accept multiple crypto currency donations
 
-The Monero donation address is: `44AFFq5kSiGBoZ4NMDwYtN18obc8AemS33DBLWs3H7otXft3XjrpDtQGv7SqSsaBYBb98uNbr2VBBEt7f2wfn3RVGQBEP3A` (viewkey: `f359631075708155cc3d92a32b75a7d02a5dcf27756707b47a2b31b21c389501`)
+The Monero donation address is: 4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyRGv9hcZ3jQbAgViZ 
 
-The Bitcoin donation address is: `1KTexdemPdxSBcG55heUuTjDRYqbC5ZL8H`
+The Bitcoin donation address is: 1A3pEob7bCip46xNmKaTfg9DtFxVLkqkGe
 
 Core development funding and/or some supporting services are also graciously provided by sponsors:
 
