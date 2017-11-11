@@ -51,7 +51,7 @@
 
 // MONEY_SUPPLY - total number coins to be generated
 #define MONEY_SUPPLY                                    ((uint64_t)(-1))
-#define EMISSION_SPEED_FACTOR_PER_MINUTE                (21)
+#define EMISSION_SPEED_FACTOR_PER_MINUTE                (20)
 #define FINAL_SUBSIDY_PER_MINUTE                        ((uint64_t)300000000000) // 3 * pow(10, 11)
 
 #define CRYPTONOTE_REWARD_BLOCKS_WINDOW                 100
@@ -72,8 +72,8 @@
 #define ORPHANED_BLOCKS_MAX_COUNT                       100
 
 
-#define DIFFICULTY_TARGET_V2                            60  // seconds
-#define DIFFICULTY_TARGET_V1                            30  // seconds - before first fork
+#define DIFFICULTY_TARGET_V2                            120  // seconds
+#define DIFFICULTY_TARGET_V1                            60  // seconds - before first fork
 #define DIFFICULTY_WINDOW                               720 // blocks
 #define DIFFICULTY_LAG                                  15  // !!!
 #define DIFFICULTY_CUT                                  60  // timestamps to cut after sorting
@@ -142,38 +142,38 @@
 // New constants are intended to go here
 namespace config
 {
-  uint64_t const DEFAULT_FEE_ATOMIC_ZMR_PER_KB = 500; // Just a placeholder!  Change me!
-  uint8_t const FEE_CALCULATION_MAX_RETRIES = 10;
-  uint64_t const DEFAULT_DUST_THRESHOLD = ((uint64_t)2000000000); // 2 * pow(10, 9)
-  uint64_t const BASE_REWARD_CLAMP_THRESHOLD = ((uint64_t)100000000); // pow(10, 8)
-  std::string const P2P_REMOTE_DEBUG_TRUSTED_PUB_KEY = "0000000000000000000000000000000000000000000000000000000000000000";
+	uint64_t const DEFAULT_FEE_ATOMIC_ZMR_PER_KB = 500; // Just a placeholder!  Change me!
+	uint8_t const FEE_CALCULATION_MAX_RETRIES = 10;
+	uint64_t const DEFAULT_DUST_THRESHOLD = ((uint64_t)2000000000); // 2 * pow(10, 9)
+	uint64_t const BASE_REWARD_CLAMP_THRESHOLD = ((uint64_t)100000000); // pow(10, 8)
+	std::string const P2P_REMOTE_DEBUG_TRUSTED_PUB_KEY = "0000000000000000000000000000000000000000000000000000000000000000";
 
-  uint64_t const CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 18;
-  uint64_t const CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX = 19;
-  uint64_t const CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX = 26;
-  uint16_t const P2P_DEFAULT_PORT = 12310;
-  uint16_t const RPC_DEFAULT_PORT = 10807;
-  uint16_t const ZMQ_RPC_DEFAULT_PORT = 11402;
-  boost::uuids::uuid const NETWORK_ID = { {
-      0x42, 0x49, 0x54, 0x5a, 0x45, 0x52, 0x49, 0x55, 0x4d
-    } }; // Bender's nightmare
-  //std::string const GENESIS_TX = "013c01ff0001ffffffffffff03029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd08807121017767aafcde9be00dcfd098715ebcf7f410daebc582fda69d24a28e9d0bc890d1";
-  std::string const GENESIS_TX = "013c01ff0001ffffffffffff03029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd0880712101588b26a89ec23d267a95ec0667d402b5e8f82ca9c2d7b6263e15faca2f731a2f";
-  uint32_t const GENESIS_NONCE = 10000;
+	uint64_t const CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 18;
+	uint64_t const CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX = 19;
+	uint64_t const CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX = 26;
+	uint16_t const P2P_DEFAULT_PORT = 12310;
+	uint16_t const RPC_DEFAULT_PORT = 10807;
+	uint16_t const ZMQ_RPC_DEFAULT_PORT = 11402;
+	boost::uuids::uuid const NETWORK_ID = { {
+			0x42, 0x49, 0x54, 0x5a, 0x45, 0x52, 0x49, 0x55, 0x4d
+		} }; // Bender's nightmare
+			 //std::string const GENESIS_TX = "013c01ff0001ffffffffffff03029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd08807121017767aafcde9be00dcfd098715ebcf7f410daebc582fda69d24a28e9d0bc890d1";
+	std::string const GENESIS_TX = "013c01ff0001ffffffffffff03029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd0880712101588b26a89ec23d267a95ec0667d402b5e8f82ca9c2d7b6263e15faca2f731a2f";
+	uint32_t const GENESIS_NONCE = 10000;
 
-  namespace testnet
-  {
-    uint64_t const CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 53;
-    uint64_t const CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX = 54;
-    uint64_t const CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX = 63;
-	uint16_t const P2P_DEFAULT_PORT = 22310;
-    uint16_t const RPC_DEFAULT_PORT = 20807;
-    uint16_t const ZMQ_RPC_DEFAULT_PORT = 21402;
-    boost::uuids::uuid const NETWORK_ID = { {
-		0x42, 0x49, 0x54, 0x5a, 0x45, 0x52, 0x49, 0x55, 0x4d, 0x54, 0x45, 0x53, 0x4e, 0x45, 0x54
-      } }; // Bender's daydream
-    //std::string const GENESIS_TX = "013c01ff0001ffffffffffff0f029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd0880712101168d0c4ca86fb55a4cf6a36d31431be1c53a3bd7411bb24e8832410289fa6f3b";
-	std::string const GENESIS_TX = "013c01ff0001ffffffffffff0f029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd08807121014b2dc01dd80fb4b9e9bc8f0f12180f6767b2b848a633f186d2c9a9c653221ad6";
-	uint32_t const GENESIS_NONCE = 10001;
-  }
+	namespace testnet
+	{
+		uint64_t const CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 53;
+		uint64_t const CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX = 54;
+		uint64_t const CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX = 63;
+		uint16_t const P2P_DEFAULT_PORT = 22310;
+		uint16_t const RPC_DEFAULT_PORT = 20807;
+		uint16_t const ZMQ_RPC_DEFAULT_PORT = 21402;
+		boost::uuids::uuid const NETWORK_ID = { {
+				0x42, 0x49, 0x54, 0x5a, 0x45, 0x52, 0x49, 0x55, 0x4d, 0x54, 0x45, 0x53, 0x4e, 0x45, 0x54
+			} }; // Bender's daydream
+				 //std::string const GENESIS_TX = "013c01ff0001ffffffffffff0f029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd0880712101168d0c4ca86fb55a4cf6a36d31431be1c53a3bd7411bb24e8832410289fa6f3b";
+		std::string const GENESIS_TX = "013c01ff0001ffffffffffff0f029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd08807121014b2dc01dd80fb4b9e9bc8f0f12180f6767b2b848a633f186d2c9a9c653221ad6";
+		uint32_t const GENESIS_NONCE = 10001;
+	}
 }
